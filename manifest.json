@@ -1,26 +1,31 @@
 {
 
-  "manifest_version": 2,
-  "name": "Borderify",
-  "version": "1.0",
+    "manifest_version": 2,
+    "name": "Borderify",
+    "version": "1.0",
 
-  "description": "Highlights the line that your mouse cursor is hovering over.",
+    "description": "Highlights the line that your mouse cursor is hovering over.",
 
-  "icons": {
-	"48": "img/border-48.png"
-  },
-
-  "browser_action": {
-        "default_icon": "img/border-48.png",
-        "default_popup": "popup.html"
+    "icons": {
+        "48": "img/border-48.png"
     },
 
-  "content_scripts": [
-	{
-	  "matches": ["<all_urls>"],
-	  "js": ["lib/jQuery.js", "lib/SplitType.js", "scripts.js"],
-      "css": ["styles.css"]
-	}
-  ]
+    "browser_action": {
+        "default_icon": "img/border-48.png"
+    },
+
+    "background": {
+        "persistent": false,
+        "page": "background.html"
+    },
+
+    "content_scripts":
+    [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["lib/jQuery.js", "lib/SplitType.js", "scripts.js"],
+            "css": ["styles.css"]
+        }
+    ]
 
 }

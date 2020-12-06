@@ -123,6 +123,4 @@ window.onload = function highlightLineOnHover() {
 	const splitType = new SplitType('.overlayContent', { types: 'lines', lineClass: 'highlightLineOnHover' } );
 	console.log(splitType);
 
-	browser.browserAction.onClicked.addListener(function() {console.log("Clicked!")});
-
 }
