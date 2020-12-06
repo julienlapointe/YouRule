@@ -102,6 +102,22 @@ window.onload = function highlightLineOnHover() {
 
 	console.log(stringifiedElementsTrimmed);
 
+	var docHeight = $(document).height();
+
+	$("body").append("<div id='overlay'>" + stringifiedElements + "</div>");
+
+	$("#overlay")
+		.height(docHeight)
+		.css({
+			'opacity' : 1,
+			'position': 'absolute',
+			'top': 0,
+			'left': 0,
+			'background-color': 'lightblue',
+			'width': '100%',
+			'z-index': 99999999
+		});
+
 	// Splits text into lines, words, characters (default)
 	// const splitType = new SplitType('h1, h2, h3, h4, h5, h6, p, pre, span, article, section, blockquote, ol, ul, li, strong, b, em', { types: 'lines', lineClass: 'highlightLineOnHover' } );
 	const splitType = new SplitType('.overlayContent', { types: 'lines', lineClass: 'highlightLineOnHover' } );
