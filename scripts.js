@@ -23,6 +23,16 @@ window.onload = function highlightLineOnHover() {
         }
     }
 
+	for (var i = 0; i < array.length; i++) {
+		var element = document.createElement("H1");
+		var text = document.createTextNode(array[i][1]);
+		element.appendChild(text);
+		document.body.appendChild(element);
+		// $("#overlay").appendChild(element);
+		console.log(element);
+		// console.log(array[i][1]);
+	}
+
 	// Splits text into lines, words, characters (default)
 	// const splitType = new SplitType('h1, h2, h3, h4, h5, h6, p, pre, span, article, section, blockquote, ol, ul, li, strong, b, em', { types: 'lines', lineClass: 'highlightLineOnHover' } );
 	const splitType = new SplitType('.overlayContent', { types: 'lines', lineClass: 'highlightLineOnHover' } );
