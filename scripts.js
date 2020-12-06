@@ -98,6 +98,10 @@ window.onload = function highlightLineOnHover() {
 
 	console.log(stringifiedElements);
 
+	stringifiedElementsTrimmed = stringifiedElements.slice(stringifiedElements.indexOf('<h'), stringifiedElements.lastIndexOf('</p>')+4);
+
+	console.log(stringifiedElementsTrimmed);
+
 	// Splits text into lines, words, characters (default)
 	// const splitType = new SplitType('h1, h2, h3, h4, h5, h6, p, pre, span, article, section, blockquote, ol, ul, li, strong, b, em', { types: 'lines', lineClass: 'highlightLineOnHover' } );
 	const splitType = new SplitType('.overlayContent', { types: 'lines', lineClass: 'highlightLineOnHover' } );
