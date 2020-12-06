@@ -33,6 +33,71 @@ window.onload = function highlightLineOnHover() {
 		// console.log(array[i][1]);
 	}
 
+	var stringifiedElements = '';
+
+	for (var i = 0; i < array.length; i++) {
+		switch(array[i][0]) {
+			case "H1":
+				stringifiedElements += "<h1 class='overlayContent'>" + array[i][1] + "</h1>";
+				break;
+			case "H2":
+				stringifiedElements += "<h2 class='overlayContent'>" + array[i][1] + "</h2>";
+				break;
+			case "H3":
+				stringifiedElements += "<h3 class='overlayContent'>" + array[i][1] + "</h3>";
+				break;
+			case "H4":
+				stringifiedElements += "<h4 class='overlayContent'>" + array[i][1] + "</h4>";
+				break;
+			case "H5":
+				stringifiedElements += "<h5 class='overlayContent'>" + array[i][1] + "</h5>";
+				break;
+			case "H6":
+				stringifiedElements += "<h6 class='overlayContent'>" + array[i][1] + "</h6>";
+				break;
+			case "P":
+				stringifiedElements += "<p class='overlayContent'>" + array[i][1] + "</p>";
+				break;
+			case "PRE":
+				stringifiedElements += "<pre class='overlayContent'>" + array[i][1] + "</pre>";
+				break;
+			// case "SPAN":
+			// 	stringifiedElements += "<span class='overlayContent'>" + array[i][1] + "</span>";
+			// 	break;
+			case "ARTICLE":
+				stringifiedElements += "<article class='overlayContent'>" + array[i][1] + "</article>";
+				break;
+			case "SECTION":
+				stringifiedElements += "<section class='overlayContent'>" + array[i][1] + "</section>";
+				break;
+			case "BLOCKQUOTE":
+				stringifiedElements += "<blockquote class='overlayContent'>" + array[i][1] + "</blockquote>";
+				break;
+			case "OL":
+				stringifiedElements += "<ol class='overlayContent'>" + array[i][1] + "</ol>";
+				break;
+			case "UL":
+				stringifiedElements += "<ul class='overlayContent'>" + array[i][1] + "</ul>";
+				break;
+			case "LI":
+				stringifiedElements += "<li class='overlayContent'>" + array[i][1] + "</li>";
+				break;
+			case "STRONG":
+				stringifiedElements += "<strong class='overlayContent'>" + array[i][1] + "</strong>";
+				break;
+			case "B":
+				stringifiedElements += "<b class='overlayContent'>" + array[i][1] + "</b>";
+				break;
+			case "EM":
+				stringifiedElements += "<em class='overlayContent'>" + array[i][1] + "</em>";
+				break;
+			default:
+
+		}
+	}
+
+	console.log(stringifiedElements);
+
 	// Splits text into lines, words, characters (default)
 	// const splitType = new SplitType('h1, h2, h3, h4, h5, h6, p, pre, span, article, section, blockquote, ol, ul, li, strong, b, em', { types: 'lines', lineClass: 'highlightLineOnHover' } );
 	const splitType = new SplitType('.overlayContent', { types: 'lines', lineClass: 'highlightLineOnHover' } );
